@@ -1,0 +1,279 @@
+body {
+  background-color: #ffffff;
+  font-family: 'League Spartan', sans-serif;
+}
+.fondo-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .fondo {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+  }
+.container {
+  max-width: 1200px;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 0 0 50px;
+}
+
+.title {
+  color: hsl(300, 43%, 22%);
+  font-size: 45px;
+  font-weight: bold;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: hsl(303, 10%, 53%);
+  font-size: 16px;
+  text-align: start;
+  margin-bottom: 40px;
+}
+
+.stars-container {
+  flex-direction: column;
+  display: flex;
+  align-items: end;
+  margin: 0 50px 0 0;
+  position: relative;
+  justify-content: space-between;
+}
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  background-color: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  min-width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.review-stars:nth-child(1) {
+  margin-right: 110px;
+}
+
+.review-stars:nth-child(2) {
+  margin-right: 60px;
+}
+
+.review-stars:nth-child(3) {
+  margin-right: 20px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px 0 50px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review {
+  width: 300px;
+  height: 150px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 0px 0 30px;
+  padding-top: 30px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile h4 {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+}
+
+.profile h5 {
+  margin: 0;
+  color: hsl(333, 80%, 67%);
+}
+
+.review p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.review:nth-child(2) {
+  margin-top: 20px;
+}
+
+.review:nth-child(3) {
+  margin-top: 40px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .stars-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Agregar esta línea */
+    padding-bottom: 0;
+  }
+
+  .review-stars {
+    margin: 0 10px; /* Puedes ajustar el valor del margen según tus necesidades */
+    flex-shrink: 0; /* Agrega esta línea para evitar que se reduzcan de tamaño */
+    min-width: 300px;
+  }
+
+  .review-stars:nth-child(1),
+  .review-stars:nth-child(2),
+  .review-stars:nth-child(3) {
+    margin: 0;
+    margin: 10px 0; /* Puedes ajustar el valor del margen según tus necesidades */
+    flex-shrink: 0; 
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Agregar esta línea */
+    align-items: center;
+  }
+
+  .reviews-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Agregar esta línea */
+    margin: 0;
+    flex-direction: row-reverse;
+  }
+
+  .review {
+    margin: 0;
+  }
+
+  .review.profile {
+    width: 100%;
+    margin: 0 0 20px 0; /* Puedes ajustar el margen según tus necesidades */
+  }
+
+  .review .profile img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .profile-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 375px) { 
+    .container { 
+      max-width: 375px; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+    } 
+    .title-container { 
+      width: 100%; 
+      margin: 0; 
+    } 
+    .stars-container { 
+      display: flex; 
+      justify-content: center; 
+      margin: 20px 0; 
+      flex-wrap: wrap; /* Agregar esta línea */ 
+      padding-bottom: 0; 
+    } 
+    .review-stars { 
+      margin: 0 10px; /* Puedes ajustar el valor del margen según tus necesidades */ 
+      flex-shrink: 0; /* Agrega esta línea para evitar que se reduzcan de tamaño */ 
+      min-width: 250px; 
+    } 
+    .review-stars:nth-child(1), 
+    .review-stars:nth-child(2), 
+    .review-stars:nth-child(3) { 
+      margin: 0; 
+      margin: 10px 0; /* Puedes ajustar el valor del margen según tus necesidades */ 
+      flex-shrink: 0;  
+    } 
+    .reviews { 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; /* Agregar esta línea */ 
+      align-items: center; 
+    } 
+    .reviews-container { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; /* Agregar esta línea */ 
+      margin: 0; 
+      flex-direction: row-reverse; 
+    } 
+    .review { 
+      margin: 0; 
+    } 
+    .review.profile { 
+      width: 100%; 
+      margin: 0 0 20px 0; /* Puedes ajustar el margen según tus necesidades */ 
+    } 
+    .review .profile img { 
+      max-width: 100%; 
+      height: auto; 
+    } 
+    .profile-text { 
+      width: 100%; 
+      text-align: center; 
+    } 
+  } 
